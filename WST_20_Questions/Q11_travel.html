@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Booking</title>
+</head>
+<body>
+
+<h2>Travel Details</h2>
+<pre id="output"></pre>
+
+<script>
+let booking = {
+    name: "Samiksha",
+    from: "Mumbai",
+    to: "Goa",
+    mode: "Train",
+    price: 1500
+};
+
+document.getElementById("output").innerHTML =
+    JSON.stringify(booking, null, 2);
+</script>
+
+</body>
+</html>

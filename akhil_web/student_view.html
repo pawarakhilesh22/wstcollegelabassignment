@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Student Details</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="container mt-5">
+
+<h2>Student Details</h2>
+
+<div class="card p-4">
+
+<p><b>Name:</b> <span id="name"></span></p>
+<p><b>Email:</b> <span id="email"></span></p>
+<p><b>Gender:</b> <span id="gender"></span></p>
+<p><b>City:</b> <span id="city"></span></p>
+<p><b>Skills:</b> <span id="skills"></span></p>
+<p><b>Address:</b> <span id="address"></span></p>
+
+</div>
+
+<script>
+
+let params = new URLSearchParams(window.location.search);
+let id = params.get("id");
+
+let students = JSON.parse(localStorage.getItem("students"));
+
+let student = students[id];
+
+document.getElementById("name").innerText = student.name;
+document.getElementById("email").innerText = student.email;
+document.getElementById("gender").innerText = student.gender;
+document.getElementById("city").innerText = student.city;
+document.getElementById("skills").innerText = student.skills;
+document.getElementById("address").innerText = student.address;
+
+</script>
+
+</body>
+</html>

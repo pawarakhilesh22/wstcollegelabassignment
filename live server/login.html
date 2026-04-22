@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form>
+
+        <!-- Name -->
+        <p>
+            <label>Name:</label>
+            <input type="text" name="name">
+        </p>
+
+        <!-- Email -->
+        <p>
+            <label>Email:</label>
+            <input type="email" name="email">
+        </p>
+
+        <!-- Password -->
+        <p>
+            <label>Password:</label>
+            <input type="password" name="password">
+        </p>
+
+        <!-- Gender (Radio buttons) -->
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+        </p>
+
+        <!-- Skills (Checkboxes) -->
+        <p>
+            <label>Skills:</label><br>
+            <input type="checkbox" name="skills" value="html"> HTML
+            <input type="checkbox" name="skills" value="css"> CSS
+            <input type="checkbox" name="skills" value="python"> Python
+        </p>
+
+        <!-- City (Dropdown) -->
+        <p>
+            <label>City:</label>
+            <select name="city">
+                <option>Pune</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Bangalore</option>
+            </select>
+        </p>
+
+        <!-- Submit Button -->
+        <p>
+            <input type="submit" value="Register">
+        </p>
+
+    </form>
+
+</body>
+</html>

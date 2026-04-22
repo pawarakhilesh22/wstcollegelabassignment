@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School System</title>
+</head>
+<body>
+
+<h2>School Details</h2>
+<pre id="output"></pre>
+
+<script>
+let school = {
+    student: "Samiksha",
+    class: "MCA",
+    subjects: ["Web Tech", "DBMS", "AI"],
+    marks: {
+        WebTech: 85,
+        DBMS: 90,
+        AI: 88
+    }
+};
+
+document.getElementById("output").innerHTML =
+    JSON.stringify(school, null, 2);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Form</title>
+</head>
+<body>
+
+<h2>Patient Admission Form</h2>
+
+<form onsubmit="return validate()">
+
+    Patient ID: <input type="text" id="pid"><br><br>
+    Name: <input type="text" id="name"><br><br>
+    Aadhar No: <input type="text" id="aadhar"><br><br>
+    Contact: <input type="text" id="contact"><br><br>
+    DOB: <input type="date" id="dob"><br><br>
+    Age: <input type="text" id="age" readonly><br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+document.getElementById("dob").onchange = function(){
+    let dob = new Date(this.value);
+    let today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    document.getElementById("age").value = age;
+}
+
+function validate(){
+
+    let pid = document.getElementById("pid").value;
+    let name = document.getElementById("name").value;
+    let aadhar = document.getElementById("aadhar").value;
+    let contact = document.getElementById("contact").value;
+
+    if(pid=="" || name=="" || aadhar=="" || contact==""){
+        alert("All fields are required");
+        return false;
+    }
+
+    if(aadhar.length != 12){
+        alert("Aadhar must be 12 digits");
+        return false;
+    }
+
+    if(contact.length != 10){
+        alert("Contact must be 10 digits");
+        return false;
+    }
+
+    alert("Form Submitted");
+    return true;
+}
+</script>
+
+</body>
+</html>

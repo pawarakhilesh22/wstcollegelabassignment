@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill</title>
+</head>
+<body>
+
+<h2>Electricity Bill Form</h2>
+
+<form onsubmit="return bill()">
+    Consumer No: <input type="text" id="cno"><br><br>
+    Consumer Name: <input type="text" id="name"><br><br>
+    Units Consumed: <input type="text" id="units"><br><br>
+    <button type="submit">Calculate Bill</button>
+</form>
+
+<h3 id="result"></h3>
+
+<script>
+function bill(){
+    let cno = document.getElementById("cno").value;
+    let name = document.getElementById("name").value;
+    let units = document.getElementById("units").value;
+    let amount = 0;
+
+    if(cno=="" || name=="" || units==""){
+        alert("Fill all fields");
+        return false;
+    }
+
+    units = parseInt(units);
+
+    if(units <= 100)
+        amount = units * 2;
+    else if(units <= 200)
+        amount = units * 3;
+    else
+        amount = units * 5;
+
+    document.getElementById("result").innerHTML =
+        "Bill Amount = Rs. " + amount;
+
+    return false;
+}
+</script>
+
+</body>
+</html>

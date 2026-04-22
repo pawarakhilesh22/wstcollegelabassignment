@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Tournament</title>
+</head>
+<body>
+
+<h2>Tournament Details</h2>
+<pre id="output"></pre>
+
+<script>
+let tournament = {
+    name: "Kabaddi League",
+    teams: ["Team A", "Team B", "Team C"],
+    winner: "Team A",
+    location: "Mumbai"
+};
+
+document.getElementById("output").innerHTML =
+    JSON.stringify(tournament, null, 2);
+</script>
+
+</body>
+</html>

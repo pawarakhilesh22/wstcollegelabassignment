@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Page</title>
+    <style>
+        .product {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+        }
+        #desc {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Online Shopping</h2>
+
+<div class="product" onclick="show('Mobile with good features')">
+    <img src="https://via.placeholder.com/120">
+    <p>Mobile</p>
+</div>
+
+<div class="product" onclick="show('Laptop for study and work')">
+    <img src="https://via.placeholder.com/120">
+    <p>Laptop</p>
+</div>
+
+<div class="product" onclick="show('Comfortable sports shoes')">
+    <img src="https://via.placeholder.com/120">
+    <p>Shoes</p>
+</div>
+
+<h3 id="desc"></h3>
+
+<script>
+function show(text){
+    document.getElementById("desc").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

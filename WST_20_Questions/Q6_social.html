@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Post</title>
+</head>
+<body>
+
+<h2>Post Details</h2>
+<pre id="output"></pre>
+
+<script>
+let post = {
+    user: "Samiksha",
+    content: "Enjoying my day 😊",
+    likes: 120,
+    comments: ["Nice!", "Awesome!", "Great post!"]
+};
+
+document.getElementById("output").innerHTML =
+    JSON.stringify(post, null, 2);
+</script>
+
+</body>
+</html>

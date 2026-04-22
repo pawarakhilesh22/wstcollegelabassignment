@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student List</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="container mt-5">
+
+<h2>Student List</h2>
+
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>Student Name</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="studentTable"></tbody>
+</table>
+
+<script>
+
+let students = JSON.parse(localStorage.getItem("students")) || [];
+
+let table = document.getElementById("studentTable");
+
+students.forEach((student,index)=>{
+
+table.innerHTML += `
+<tr>
+<td>${student.name}</td>
+<td>
+<a href="student_view.html?id=${index}" class="btn btn-primary">View</a>
+</td>
+</tr>
+`;
+
+});
+
+</script>
+
+</body>
+</html>

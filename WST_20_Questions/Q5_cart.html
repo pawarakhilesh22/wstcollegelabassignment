@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce Cart</title>
+</head>
+<body>
+
+<h2>Cart Details</h2>
+<pre id="output"></pre>
+
+<script>
+let cart = {
+    user: "Samiksha",
+    items: [
+        { name: "Mobile", price: 10000, qty: 1 },
+        { name: "Shoes", price: 2000, qty: 2 }
+    ]
+};
+
+let total = 0;
+
+cart.items.forEach(item => {
+    total += item.price * item.qty;
+});
+
+document.getElementById("output").innerHTML =
+    JSON.stringify(cart, null, 2) + 
+    "\nTotal = Rs. " + total;
+</script>
+
+</body>
+</html>
